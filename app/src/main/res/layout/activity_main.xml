@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_text_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:text="1.输入文本（支持汉字、英文、数字、标点）"/>
+
+    <com.example.walle.testinput.TextWordLayout
+        android:id="@+id/twl_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:box_draw_type="line"
+        app:pass_inputed_type="text"
+        app:interval_width="4dp"
+        app:item_height="26dp"
+        app:item_width="20dp"
+        app:draw_txt_size="18sp"
+        app:input_text_enable="true"
+        app:input_line_color="#333333"
+        app:text_input_color="#333333"
+        app:box_input_color="#EE3A5C"
+        app:pass_leng="four"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_title"
+        app:layout_constraintStart_toStartOf="@id/tv_text_title"/>
+
+    <TextView
+        android:id="@+id/tv_text_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/twl_text"
+        app:layout_constraintStart_toStartOf="@id/twl_text"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        tool:text="你好世界"/>
+
+    <TextView
+        android:id="@+id/tv_num_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_input"
+        app:layout_constraintStart_toStartOf="@id/tv_text_input"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:text="2.输入数字"/>
+
+    <com.example.walle.testinput.TextWordLayout
+        android:id="@+id/twl_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:box_draw_type="line"
+        app:pass_inputed_type="text"
+        app:interval_width="4dp"
+        app:item_height="26dp"
+        app:item_width="20dp"
+        app:draw_txt_size="18sp"
+        app:input_text_enable="false"
+        app:input_line_color="#333333"
+        app:text_input_color="#333333"
+        app:box_input_color="#EE3A5C"
+        app:pass_leng="six"
+        app:layout_constraintTop_toBottomOf="@id/tv_num_title"
+        app:layout_constraintStart_toStartOf="@id/tv_num_title"/>
+
+    <TextView
+        android:id="@+id/tv_num_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/twl_num"
+        app:layout_constraintStart_toStartOf="@id/twl_num"
+        android:layout_marginTop="8dp"
+        tool:text="1234"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="变更输入位数"/>
+
+</android.support.constraint.ConstraintLayout>
